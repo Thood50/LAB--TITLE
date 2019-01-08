@@ -51,31 +51,38 @@ namespace ConsoleApp1
 
         static bool Answers(string guess)
         {
-            if(guess == "Blue")
+            try
+            {
+                if (guess == "Blue")
                 {
-                return true;
-            }
-            
-            if (guess == "yes")
-            {
-                return true;
-            }
-            
-            if (guess == "Chelan" || guess == "Lake Chelan")
-            {
-                return true;
-            }
+                    return true;
+                }
 
-            if (Convert.ToInt32(guess) == 2)
-            {
-                return true;
-            }
+                if (guess == "yes")
+                {
+                    return true;
+                }
 
-            if (Convert.ToInt32(guess) == 24)
-            {
-                return true;
+                if (guess == "Chelan" || guess == "Lake Chelan")
+                {
+                    return true;
+                }
+
+                if (Convert.ToInt32(guess) == 2)
+                {
+                    return true;
+                }
+
+                if (Convert.ToInt32(guess) == 24)
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            else
+            catch (FormatException)
             {
                 return false;
             }
