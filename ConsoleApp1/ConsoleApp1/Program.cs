@@ -108,8 +108,8 @@ namespace ConsoleApp1
                 total = Total(total);
                 return total;
             }
-            else (Answers(Console.ReadLine()) == false)
-                {
+            else
+            {
                 Console.WriteLine("its fine not to care.");
                 return total;
             }
