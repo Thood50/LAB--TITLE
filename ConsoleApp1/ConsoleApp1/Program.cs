@@ -30,22 +30,22 @@ namespace ConsoleApp1
         {
             try
             {
-                FavColor(total);
+                int one = FavColor(total);
 
-                Age(total);
+                int two = Age(one);
 
-                Bilingual(total);
+                int three = Bilingual(two);
 
-                Dogs(total);
+                int four = Dogs(three);
 
-                Born(total);
+                int five = Born(four);
 
-                Console.WriteLine(QuizResults(total));
+                Console.WriteLine(QuizResults(five));
             }
 
             catch (Exception e)
             {
-                Console.WriteLine($"oops, {e.Message} in the Question Method! sorry to interrupt your invigorating quiz....");
+                Console.WriteLine($"Oops, {e.Message} Sorry to interrupt your invigorating quiz....");
             }
         }//closing Questions method
 
