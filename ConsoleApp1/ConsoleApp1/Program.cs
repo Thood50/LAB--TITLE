@@ -96,41 +96,56 @@ namespace ConsoleApp1
 
             catch (Exception e)
             {
-                Console.WriteLine($"oops, {e.Message}! sorry to interrupt your invigorating quiz....");
+                Console.WriteLine($"oops, {e.Message} in the Question Method! sorry to interrupt your invigorating quiz....");
             }
         }
 
         static bool Answers(string guess)
         {
-            if (guess == "Blue")
+            try
             {
-                return true;
+                if (guess == "Blue")
+                {
+                    return true;
+                }
+                if (Convert.ToByte(guess) == 24)
+                {
+                    return true;
+                }
+                if (guess == "yes" || guess == "true")
+                {
+                    return true;
+                }
+                if (Convert.ToByte(guess) == 2)
+                {
+                    return true;
+                }
+                if (guess == "Chelan" || guess == "Lake Chelan")
+                {
+                    return true;
+                }
+                else
+                {
+                    return false;
+                }
             }
-            if (Convert.ToByte(guess) == 24)
+
+            catch (Exception e)
             {
-                return true;
-            }
-            if (guess == "yes" || guess == "true")
-            {
-                return true;
-            }
-            if (Convert.ToByte(guess) == 2)
-            {
-                return true;
-            }
-            if (guess == "Chelan" || guess == "Lake Chelan")
-            {
-                return true;
-            }
-            else
-            {
-                return false;
+                Console.WriteLine($"oops, {e.Message} in the Answers Method! sorry to interrupt your invigorating quiz....");
             }
         }
         
         static int Total(int oldTotal)
     {
-            return oldTotal + 1;
+            try {
+                return oldTotal + 1;
+            }
+
+            catch(Exception e)
+            {
+                Console.WriteLine($"oops, {e.Message} in the Total Method! sorry to interrupt your invigorating quiz....");
+            }
     }
     }
 }
