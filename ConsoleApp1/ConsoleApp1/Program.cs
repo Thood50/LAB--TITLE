@@ -27,7 +27,7 @@ namespace ConsoleApp1
 
         static string Questions(int total)
         {
-            Console.WriteLine("First Questions: ");
+            Console.WriteLine("First Question: ");
             Console.WriteLine("What is Tylers Favorite Color?");
             if (Answers(Console.ReadLine()) == true)
             {
@@ -38,9 +38,9 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("its fine not to care.");
             }
-            Console.WriteLine("Second Questions: ");
+            Console.WriteLine("Second Question: ");
             Console.WriteLine("How old is Tyler");
-            if(Answers(Console.ReadLine()) == true)
+            if (Answers(Console.ReadLine()) == true)
             {
                 Console.WriteLine("Luckiest guess of your life");
                 total = Total(total);
@@ -49,7 +49,47 @@ namespace ConsoleApp1
             {
                 Console.WriteLine("The odds were against you anyways");
             }
-
+            Console.WriteLine("Third Question: ");
+            Console.WriteLine("Can Tyler speak two languages?");
+            if (Answers(Console.ReadLine()) == true)
+            {
+                Console.WriteLine("Well I speak german, I dont english good though xD");
+                total = Total(total);
+            }
+            if (Answers(Console.ReadLine()) == false)
+            {
+                Console.WriteLine("Wow, you think im uncultured, ill remember that....");
+            }
+            Console.WriteLine("Forth Question: ");
+            Console.WriteLine("How many puppies do I have?");
+            if (Answers(Console.ReadLine()) == true)
+            {
+                Console.WriteLine("Well they are actually fully grown, but they will forever be puppies to me!!");
+                total = Total(total);
+            }
+            if (Answers(Console.ReadLine()) == false)
+            {
+                Console.WriteLine("Yes, I have a pulse....gosh");
+            }
+            Console.WriteLine("Last Question I swear: ");
+            Console.WriteLine("Where was I born/raised?");
+            if (Answers(Console.ReadLine()) == true)
+            {
+                Console.WriteLine("Its really creepy that you knew that!");
+                total = Total(total);
+            }
+            if (Answers(Console.ReadLine()) == false)
+            {
+                Console.WriteLine("Actually really glad you got it wrong, that would be creepy if you knew that!");
+            }
+            if (total <= 3)
+            {
+                return $"Welp, you got {total} right, glad to know we're complete strangers to one another xD";
+            }
+            if (total > 3)
+            {
+                return $"Uh, its wierd that you got {total} right.....dont ask me to take your quiz, I wont do that well....";
+            }
         }
 
         static bool Answers(string guess)
