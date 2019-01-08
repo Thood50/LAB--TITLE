@@ -21,8 +21,8 @@ Setup:
 -Once you have that open copy and paste the source code below into the Program.cs file    
 -Hit control S to save the source code you pasted into your file  
 -Now go back up to the Solution Explorer - Folder View and hit the little folder tab to change back to the just the Solution Explorer  
--Now its time to run the code in the top nav bar hit Debug
--Then Click Start Debug to start the quiz!
+-Now its time to run the code in the top nav bar hit Debug  
+-Then Click Start Debug to start the quiz!   
 
 Source Code:  
 -
