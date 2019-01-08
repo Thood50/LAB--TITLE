@@ -53,17 +53,17 @@ namespace ConsoleApp1
         {
             try
             {
-                if (guess == "Blue")
+                if (guess == "Blue" || guess == "blue")
                 {
                     return true;
                 }
 
-                if (guess == "yes")
+                if (guess == "yes" || guess == "Yes" || guess == "True" || guess == "true")
                 {
                     return true;
                 }
 
-                if (guess == "Chelan" || guess == "Lake Chelan")
+                if (guess == "Chelan" || guess == "chelan" || guess == "Lake Chelan" || guess == "lake chelan")
                 {
                     return true;
                 }
