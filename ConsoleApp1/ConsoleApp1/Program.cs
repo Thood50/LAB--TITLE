@@ -12,7 +12,7 @@ namespace ConsoleApp1
             // atleast 1 try catch
             // start without code manipulation
 
-            byte correctAnswers = 0;
+            int correctAnswers = 0;
 
             Console.WriteLine("Hello, welcome to another boring console quiz about someone you dont care about xD");
 
@@ -25,11 +25,16 @@ namespace ConsoleApp1
             //Where was I born/raised
         }
 
-        static string Questions(byte total)
+        static string Questions(int total)
         {
             Console.WriteLine("First Questions: ");
             Console.WriteLine("What is Tylers Favorite Color?");
-            Answers(Console.ReadLine());
+            if (Answers(Console.ReadLine()) == true)
+            {
+                Console.WriteLine("hmmmm.....you must be cheating");
+                total = Total(total);
+            }
+            
 
         }
 
@@ -61,9 +66,9 @@ namespace ConsoleApp1
             }
         }
         
-        static byte Total()
+        static int Total(int oldTotal)
     {
-
+            return oldTotal + 1;
     }
     }
 }
