@@ -34,7 +34,21 @@ namespace ConsoleApp1
                 Console.WriteLine("hmmmm.....you must be cheating");
                 total = Total(total);
             }
-            
+            if (Answers(Console.ReadLine()) == false)
+            {
+                Console.WriteLine("its fine not to care.");
+            }
+            Console.WriteLine("Second Questions: ");
+            Console.WriteLine("How old is Tyler");
+            if(Answers(Console.ReadLine()) == true)
+            {
+                Console.WriteLine("Luckiest guess of your life");
+                total = Total(total);
+            }
+            if (Answers(Console.ReadLine()) == false)
+            {
+                Console.WriteLine("The odds were against you anyways");
+            }
 
         }
 
