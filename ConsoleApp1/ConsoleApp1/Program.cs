@@ -10,30 +10,37 @@ namespace ConsoleApp1
             // include atleast 3 non-void methods
             // include atleast 3 different return types
             // atleast 1 try catch
-            // start without code manipulation  
+            // start without code manipulation 
+
+            Console.WriteLine("Hello, welcome to another boring console quiz about someone you dont care about xD");
+            FavColor();
+            Age();
+            Bilingual();
+            Dogs();
+            Cats();
         }
 
-        static string FavColor(string guess)
+        static string FavColor()
         {
             //question logic
         }
 
-        static byte Age(byte guess)
+        static byte Age()
         {
             //question logic
         }
 
-        static bool Bilingual(bool guess)
+        static bool Bilingual()
         {
             //question logic
         }
 
-        static byte Dogs(byte guess)
+        static byte Dogs()
         {
             //question logic
         }
 
-        static byte Cats(byte guess)
+        static byte Cats()
         {
             //question logic
         }
