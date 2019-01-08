@@ -30,28 +30,10 @@ namespace ConsoleApp1
         {
             try
             {
-                Console.WriteLine("First Question: ");
-                Console.WriteLine("What is Tylers Favorite Color?");
-                if (Answers(Console.ReadLine()) == true)
-                {
-                    Console.WriteLine("hmmmm.....you must be cheating");
-                    total = Total(total);
-                }
-                if (Answers(Console.ReadLine()) == false)
-                {
-                    Console.WriteLine("its fine not to care.");
-                }
-                Console.WriteLine("Second Question: ");
-                Console.WriteLine("How old is Tyler");
-                if (Answers(Console.ReadLine()) == true)
-                {
-                    Console.WriteLine("Luckiest guess of your life");
-                    total = Total(total);
-                }
-                if (Answers(Console.ReadLine()) == false)
-                {
-                    Console.WriteLine("The odds were against you anyways");
-                }
+                FavColor(total);
+
+                Age(total);
+
                 Console.WriteLine("Third Question: ");
                 Console.WriteLine("Can Tyler speak two languages?");
                 if (Answers(Console.ReadLine()) == true)
@@ -59,7 +41,7 @@ namespace ConsoleApp1
                     Console.WriteLine("Well I speak german, I dont english good though xD");
                     total = Total(total);
                 }
-                if (Answers(Console.ReadLine()) == false)
+                else
                 {
                     Console.WriteLine("Wow, you think im uncultured, ill remember that....");
                 }
@@ -70,7 +52,7 @@ namespace ConsoleApp1
                     Console.WriteLine("Well they are actually fully grown, but they will forever be puppies to me!!");
                     total = Total(total);
                 }
-                if (Answers(Console.ReadLine()) == false)
+                else
                 {
                     Console.WriteLine("Yes, I have a pulse....gosh");
                 }
@@ -81,7 +63,7 @@ namespace ConsoleApp1
                     Console.WriteLine("Its really creepy that you knew that!");
                     total = Total(total);
                 }
-                if (Answers(Console.ReadLine()) == false)
+                else
                 {
                     Console.WriteLine("Actually really glad you got it wrong, that would be creepy if you knew that!");
                 }
@@ -142,5 +124,39 @@ namespace ConsoleApp1
                 return response;
             }
         }//closing QuezResults method
+
+        static int FavColor(int total)
+        {
+            Console.WriteLine("First Question: ");
+            Console.WriteLine("What is Tylers Favorite Color?");
+            if (Answers(Console.ReadLine()) == true)
+            {
+                Console.WriteLine("hmmmm.....you must be cheating");
+                total = Total(total);
+                return total;
+            }
+            else (Answers(Console.ReadLine()) == false)
+                {
+                Console.WriteLine("its fine not to care.");
+                return total;
+            }
+        }//closing FavColor method
+
+        static int Age(int total)
+        {
+            Console.WriteLine("Second Question: ");
+            Console.WriteLine("How old is Tyler");
+            if (Answers(Console.ReadLine()) == true)
+            {
+                Console.WriteLine("Luckiest guess of your life");
+                total = Total(total);
+                return total;
+            }
+            else
+            {
+                Console.WriteLine("The odds were against you anyways");
+                return total;
+            }
+        }
     }
 }
