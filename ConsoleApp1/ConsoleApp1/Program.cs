@@ -45,7 +45,7 @@ namespace ConsoleApp1
 
             catch (Exception e)
             {
-                Console.WriteLine($"Oops, {e.Message} Sorry to interrupt your invigorating quiz....");
+                Console.WriteLine($"Oops, {e.Message} Sorry to interrupt your invigorating quiz....please close the Consule and report the bug to Tyler!");
             }
         }//closing Questions method
 
