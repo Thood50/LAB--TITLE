@@ -55,19 +55,23 @@ namespace ConsoleApp1
                 {
                 return true;
             }
-            if (Convert.ToByte(guess) == 24)
+            
+            if (guess == "yes")
             {
                 return true;
             }
-            if (guess == "yes" || guess == "true")
-            {
-                return true;
-            }
-            if (Convert.ToByte(guess) == 2)
-            {
-                return true;
-            }
+            
             if (guess == "Chelan" || guess == "Lake Chelan")
+            {
+                return true;
+            }
+
+            if (Convert.ToInt32(guess) == 2)
+            {
+                return true;
+            }
+
+            if (Convert.ToInt32(guess) == 24)
             {
                 return true;
             }
