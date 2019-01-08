@@ -18,6 +18,7 @@ namespace ConsoleApp1
 
             Questions(correctAnswers);
 
+            Console.ReadLine();
             //Favorite Color
             //Age
             //Bilingual
@@ -25,7 +26,7 @@ namespace ConsoleApp1
             //Where was I born/raised
         }
 
-        static string Questions(int total)
+        static void Questions(int total)
         {
             try
             {
@@ -84,68 +85,60 @@ namespace ConsoleApp1
                 {
                     Console.WriteLine("Actually really glad you got it wrong, that would be creepy if you knew that!");
                 }
-                if (total <= 3)
-                {
-                    return $"Welp, you got {total} right, glad to know we're complete strangers to one another xD";
-                }
-                if (total > 3)
-                {
-                    return $"Uh, its wierd that you got {total} right.....dont ask me to take your quiz, I wont do that well....";
-                }
+                Console.WriteLine(QuizResults(total));
             }
 
             catch (Exception e)
             {
                 Console.WriteLine($"oops, {e.Message} in the Question Method! sorry to interrupt your invigorating quiz....");
             }
-        }
+        }//closing Questions method
 
         static bool Answers(string guess)
         {
-            try
+            if(guess == "Blue")
+                {
+                return true;
+            }
+            if (Convert.ToByte(guess) == 24)
             {
-                if (guess == "Blue")
-                {
-                    return true;
-                }
-                if (Convert.ToByte(guess) == 24)
-                {
-                    return true;
-                }
-                if (guess == "yes" || guess == "true")
-                {
-                    return true;
-                }
-                if (Convert.ToByte(guess) == 2)
-                {
-                    return true;
-                }
-                if (guess == "Chelan" || guess == "Lake Chelan")
-                {
-                    return true;
-                }
-                else
-                {
-                    return false;
-                }
+                return true;
+            }
+            if (guess == "yes" || guess == "true")
+            {
+                return true;
+            }
+            if (Convert.ToByte(guess) == 2)
+            {
+                return true;
+            }
+            if (guess == "Chelan" || guess == "Lake Chelan")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
             }
 
-            catch (Exception e)
-            {
-                Console.WriteLine($"oops, {e.Message} in the Answers Method! sorry to interrupt your invigorating quiz....");
-            }
-        }
+        }//closing Answers method
         
         static int Total(int oldTotal)
-    {
-            try {
-                return oldTotal + 1;
-            }
+        {
+            return oldTotal + 1;
 
-            catch(Exception e)
+        }//closing Total method
+
+        static string QuizResults(int total)
+        {
+            if (total <= 3)
             {
-                Console.WriteLine($"oops, {e.Message} in the Total Method! sorry to interrupt your invigorating quiz....");
+                return $"Welp, you got {total} right, glad to know we're complete strangers to one another xD";
             }
-    }
+            if (total > 3)
+            {
+                return $"Uh, its wierd that you got {total} right.....dont ask me to take your quiz, I wont do that well....";
+            }
+        }//closing QuezResults method
     }
 }
