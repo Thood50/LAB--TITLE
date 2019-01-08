@@ -10,39 +10,60 @@ namespace ConsoleApp1
             // include atleast 3 non-void methods
             // include atleast 3 different return types
             // atleast 1 try catch
-            // start without code manipulation 
+            // start without code manipulation
+
+            byte correctAnswers = 0;
 
             Console.WriteLine("Hello, welcome to another boring console quiz about someone you dont care about xD");
-            FavColor();
-            Age();
-            Bilingual();
-            Dogs();
-            Cats();
+
+            Questions(correctAnswers);
+
+            //Favorite Color
+            //Age
+            //Bilingual
+            //Number Dogs
+            //Where was I born/raised
         }
 
-        static string FavColor()
+        static string Questions(byte total)
         {
-            //question logic
+            Console.WriteLine("First Questions: ");
+            Console.WriteLine("What is Tylers Favorite Color?");
+            Answers(Console.ReadLine());
+
         }
 
-        static byte Age()
+        static bool Answers(string guess)
         {
-            //question logic
+            if (guess == "Blue")
+            {
+                return true;
+            }
+            if (Convert.ToByte(guess) == 24)
+            {
+                return true;
+            }
+            if (guess == "yes" || guess == "true")
+            {
+                return true;
+            }
+            if (Convert.ToByte(guess) == 2)
+            {
+                return true;
+            }
+            if (guess == "Chelan" || guess == "Lake Chelan")
+            {
+                return true;
+            }
+            else
+            {
+                return false;
+            }
         }
+        
+        static byte Total()
+    {
 
-        static bool Bilingual()
-        {
-            //question logic
-        }
-
-        static byte Dogs()
-        {
-            //question logic
-        }
-
-        static byte Cats()
-        {
-            //question logic
-        }
+    }
     }
 }
