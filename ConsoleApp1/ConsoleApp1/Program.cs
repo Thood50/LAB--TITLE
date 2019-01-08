@@ -133,11 +133,13 @@ namespace ConsoleApp1
         {
             if (total <= 3)
             {
-                return $"Welp, you got {total} right, glad to know we're complete strangers to one another xD";
+                string response = $"Welp, you got {total} right, glad to know we're complete strangers to one another xD";
+                return response;
             }
-            if (total > 3)
+            else
             {
-                return $"Uh, its wierd that you got {total} right.....dont ask me to take your quiz, I wont do that well....";
+                string response = $"Uh, its wierd that you got {total} right.....dont ask me to take your quiz, I wont do that well....";
+                return response;
             }
         }//closing QuezResults method
     }
